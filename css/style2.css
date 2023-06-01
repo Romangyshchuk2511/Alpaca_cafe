@@ -1,0 +1,205 @@
+.container{
+    width: 1275px;
+    height: 100%;
+    font-family: 'Comfortaa';
+    background: rgba(248, 235, 211, 0.5);
+    display: block;
+    margin: 0 auto;
+}
+header{
+    background-image: url(..//img/card-bg-light.png);
+    background-repeat: no-repeat; 
+    height: 1000px;
+    width: 1200px;
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	background: #292C35;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+
+.moon{
+	width: 15px;
+    height: 15px;
+    margin-left: 3px;
+    margin-top: 3px;
+
+}
+
+.sun{
+	width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    margin: px;
+}
+#button {
+    
+    display: none;
+    visibility: hidden;
+  }
+  .block {
+    width: 25px;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    left: calc(50% - 12.5px);
+    top: 20px;
+    transition: 0.3s;
+    display: none;
+    visibility: hidden;
+  }
+  .block:after,
+  .block:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    transition: 0.3s;
+  }
+  .block:after {
+    top: 9px;
+  }
+  .block:before {
+    bottom: 9px;
+  }
+  #button:checked ~ .button > .block {
+    background: transparent;
+  }
+  #button:checked ~ .button > .block:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  #button:checked ~ .button > .block:before {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
+  #button:checked ~ .menu  {
+    height: 79px;
+  }
+  #button:checked ~ .menu > .menu_item:not(.logo) {
+    display: none;
+  }
+.header-content-desktop{
+    position: relative;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header-content-desktop div{
+    width: 300px;
+    height: 100px;
+    visibility: hidden;
+}
+.header-content-tablet div{
+    width: 300px;
+    height: 100px;
+    visibility: hidden;
+}
+.header-content-tablet{
+    display: none;
+    visibility: hidden;
+}
+.header-content-desktop p{
+    width: 595px;
+    height: 545px;
+    margin-right: 80px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #5D4A39;
+}
+
+.logo{
+
+    align-self: center;
+    width: 475.69px;
+    height: 64.82px;
+}
+h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: #000000;
+}
+a{
+    color: #000000;
+}
+
+header a{
+    margin-left: 80px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    color: #000000;
+    text-decoration: none;
+}
+header a:hover{
+    opacity: 0.5;
+}
+
