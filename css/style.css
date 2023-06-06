@@ -2,6 +2,16 @@
     margin: 0;
     padding: 0;
 }
+body {
+	background-color: #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
 .container{
     width: 1275px;
     height: 100%;
@@ -46,21 +56,25 @@ header{
 * {
 	box-sizing: border-box;
 }
-
-body {
-	background-color: #fafafa;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	margin: 0;
-	transition: background 0.2s linear;
-}
-
 body.dark {
 	background: #292C35;
 }
-
+.header-dark{
+    background-image: url(..//img/headerdark.png);
+    
+}
+.a-dark{
+    color: white;
+}
+.p-dark{
+    color: white;
+}
+.container-dark{
+    background: rgb(138, 74, 22);
+}
+.main-dark{
+    background: rgb(138, 74, 22);
+}
 .checkbox {
 	opacity: 0;
 	position: absolute;
@@ -122,11 +136,11 @@ body.dark {
     margin: px;
 }
 #button {
-    
     display: none;
     visibility: hidden;
-  }
-  .block {
+    
+}
+.block {
     width: 25px;
     height: 5px;
     background: #000;
@@ -135,7 +149,6 @@ body.dark {
     top: 20px;
     transition: 0.3s;
     display: none;
-    visibility: hidden;
   }
   .block:after,
   .block:before {
@@ -180,12 +193,9 @@ body.dark {
     width: 300px;
     height: 100px;
     visibility: hidden;
+    display: flex;
 }
-.header-content-tablet div{
-    width: 300px;
-    height: 100px;
-    visibility: hidden;
-}
+
 .header-content-tablet{
     display: none;
     visibility: hidden;
@@ -273,12 +283,13 @@ p{
 .menu-flex{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .menu-flex div{
     width: 300px;
     height: 300px;
+    margin: 20px;
     
-    margin: 62px;
 }
 
 .menu-flex img{
@@ -299,8 +310,8 @@ footer{
     position: fixed;
     z-index: 1;
     padding: 0;
-    bottom: 75px;
-    right: 20px;
+    bottom: 15px;
+    right: 40px;
     width: 64px;
     height: 64px;
     font-size: 36px;
@@ -312,42 +323,43 @@ footer{
     display: none;
     cursor: pointer;
    }
-   .light-theme .up-button {
-    color: #6653d9;
-    background-color:
-   rgba(255, 255, 255, 0.8);
-    border-color: #6653d9;
-    outline-color: #b6aaff;
+   .up-button img{
+        width: 20px;
+        height: 20px;
    }
-   .light-theme .up-button:hover {
-    color: #473c8d;
-    background-color:
-   rgba(255, 255, 255, 0.8);
-    border-color: #473c8d;
-   }
-   .dark-theme .up-button {
-    color: #9484f2;
-    background-color:
-   rgba(10, 9, 16, 0.6);
-    border-color: #9484f2;
-    outline-color: #6653d9;
-   }
-   .dark-theme .upbutton:hover {
-    color: #6653d9;
-    background-color:
-   rgba(10, 9, 16, 0.6);
-    border-color: #6653d9;
-   } 
+.shown {
+    display: inline-block;
+}
+   
 @media  (min-width: 481px) and (max-width: 739px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
     .container{
         max-width: 739px;
     }
     header{
         background-image: url(..//img//Vector\ 6.png);
+        display: flex;
+        flex-direction: column;
+    }
+    .card-header{
+        background-image: url(..//img//Vector\ 6.png);
+    }
+    header .header-content-tablet{
+        align-self: center;
     }
     nav a{
         display: none;
         visibility: hidden;
+    }
+    #button{
+        display: block;
+        visibility: visible;
+    }
+    .block{
+        display: block;
     }
     nav label{
         display: none;
@@ -365,14 +377,158 @@ footer{
         display: none;
         visibility: hidden;
     }
+    
+    
     .header-content-tablet{
         display: block;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 80px;
+    }
+    .header-content-tablet p{
+        width: 500px;
+        height: 300px;
+        text-align: center;
+        font-size: 43px;
+        align-self: center;
+        line-height: 60px;
+    }
+    .menu h1{
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .menu{
+        
+        
+    }
+    .menu-flex{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .menu-flex div{
+        margin: 1px;
+    }
+    .menu-flex img{
+        width: 230px;
+        height: 230px;
+    }
+    .coffe-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .coffe-card h1{
+        text-align: center;
+    }
+    .coffe-card p{
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .coffe-card img{
+        width: 300px;
+        height: 300px;
+    }
+    .kontent{
+        position: relative;
+        top: 80px;
+    }
+}
+@media (max-width: 480px){
+    header{
+        background-image: url(..//img//Vector\ 6.png);
+        display: flex;
+        flex-direction: column;
+    }
+    nav a{
+        display: none;
+        visibility: hidden;
+    }
+    #button{
+        display: block;
+        visibility: visible;
+    }
+    .block{
+        display: block;
+    }
+    nav label{
+        display: none;
+        visibility: hidden;
+    }
+    nav input{
+        display: none;
+        visibility: hidden;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+    .header-content-desktop{
+        display: none;
         visibility: hidden;
     }
     
-}
-@media (max-width: 480px){
-
+    
+    .header-content-tablet{
+        display: block;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 80px;
+    }
+    .header-content-tablet p{
+        width: 500px;
+        height: 300px;
+        text-align: center;
+        font-size: 43px;
+        align-self: center;
+        line-height: 60px;
+    }
+    .menu h1{
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .menu{
+        
+        
+    }
+    .menu-flex{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .menu-flex div{
+        margin: 1px;
+    }
+    .menu-flex img{
+        width: 230px;
+        height: 230px;
+    }
+    .coffe-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .coffe-card h1{
+        text-align: center;
+    }
+    .coffe-card p{
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+    }
+    .coffe-card img{
+        width: 300px;
+        height: 300px;
+    }
+    .kontent{
+        position: relative;
+        top: 80px;
+    }
 }
 footer{
     background: #432311;
