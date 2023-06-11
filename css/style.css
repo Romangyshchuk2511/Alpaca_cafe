@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-	scroll-behaviour: smooth;
 }
 body {
 	background-color: #fafafa;
@@ -42,7 +41,7 @@ header{
     width: 600px;
     height: 200px;
     position: relative;
-    right: 20px;
+   
 }
 .img-coffe img{
     width: 450px;
@@ -60,6 +59,9 @@ header{
 body.dark {
 	background: #292C35;
 }
+.container-dark{
+    background: rgb(138, 74, 22);
+}
 .header-dark{
     background-image: url(..//img/headerdark.png);
     
@@ -70,11 +72,14 @@ body.dark {
 .p-dark{
     color: white;
 }
-.container-dark{
-    background: rgb(138, 74, 22);
+.h1-dark{
+    color: white;
 }
 .main-dark{
     background: rgb(138, 74, 22);
+}
+.footer-dark{
+    background: #000;
 }
 .checkbox {
 	opacity: 0;
@@ -136,53 +141,53 @@ body.dark {
     top: 20px;
     margin: px;
 }
-#button {
-    display: none;
-    visibility: hidden;
+ /* Властивочті до бургера */
     
+#button {
+  display: none;
 }
 .block {
-    width: 25px;
-    height: 5px;
-    background: #000;
-    position: absolute;
-    left: calc(50% - 12.5px);
-    top: 20px;
-    transition: 0.3s;
-    display: none;
-  }
-  .block:after,
-  .block:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    position: absolute;
-    transition: 0.3s;
-  }
-  .block:after {
-    top: 9px;
-  }
-  .block:before {
-    bottom: 9px;
-  }
-  #button:checked ~ .button > .block {
-    background: transparent;
-  }
-  #button:checked ~ .button > .block:after {
-    transform: rotate(45deg);
-    top: 0;
-  }
-  #button:checked ~ .button > .block:before {
-    transform: rotate(-45deg);
-    bottom: 0;
-  }
-  #button:checked ~ .menu  {
-    height: 79px;
-  }
-  #button:checked ~ .menu > .menu_item:not(.logo) {
-    display: none;
-  }
+  width: 25px;
+  height: 5px;
+  background: #000;
+  position: absolute;
+  left: calc(50% - 12.5px);
+  top: 20px;
+  transition: 0.3s;
+  display: none;
+}
+.block:after,
+.block:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  transition: 0.3s;
+}
+.block:after {
+  top: 9px;
+}
+.block:before {
+  bottom: 9px;
+}
+#button:checked ~ .button > .block {
+  background: transparent;
+}
+#button:checked ~ .button > .block:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+#button:checked ~ .button > .block:before {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+#button:checked ~ .menu  {
+  height: 79px;
+}
+#button:checked ~ .menu > .menu_item:not(.logo) {
+  display: none;
+}
 .header-content-desktop{
     position: relative;
     top: 100px;
@@ -292,12 +297,63 @@ p{
     margin: 20px;
     
 }
+/* Анімації до світлої теми */
+.menu-flex img {
+    --s: 3px;  /* size of the frame */
+    --b: 1px;   /* border thickness */
+    --w: 300px; /* width of the image */
+    --c: #5D4A39;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: calc(2*var(--s));
+    --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
+    background:
+      linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+      linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
+    outline: calc(var(--w)/2) solid rgba(0, 0, 0, 0.013);
+    outline-offset: calc(var(--w)/-2 - 2*var(--s));
+    transition: .4s;
+    cursor: pointer;
+  }
+  img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--s)/-2);
+    --_i: calc(100% - 2*var(--s));
+  }
 
-.menu-flex img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-}
+    
+ .menu-flex img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--s)/-2);
+    --_i: calc(100% - 2*var(--s));
+  }
+/* Анімації до темної теми */
+.menu-flex-dark img {
+    --s: 3px;  /* size of the frame */
+    --b: 1px;   /* border thickness */
+    --w: 300px; /* width of the image */
+    --c: #FEA400;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: calc(2*var(--s));
+    --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
+    background:
+      linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+      linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
+    outline: calc(var(--w)/2) solid #fea50043;
+    outline-offset: calc(var(--w)/-2 - 2*var(--s));
+    transition: .4s;
+    cursor: pointer;
+  }
+  img:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--s)/-2);
+    --_i: calc(100% - 2*var(--s));
+  }
 a{
     text-decoration: none;
 }
@@ -308,7 +364,7 @@ footer{
     
 }
 .up-button {
-    position: fixed;
+    position: fixed ;
     z-index: 1;
     padding: 0;
     bottom: 15px;
@@ -355,6 +411,10 @@ footer{
         display: none;
         visibility: hidden;
     }
+    .logo-home{
+        display: block;
+        visibility: visible;
+    }
     #button{
         display: block;
         visibility: visible;
@@ -378,8 +438,23 @@ footer{
         display: none;
         visibility: hidden;
     }
-    
-    
+    /* Властивочті до бургера */
+    #button, .button {
+		display: none;
+	}
+	#button:checked ~ .menu  {
+  		height: 100%;
+  		display: grid;
+	}
+	#button:checked ~ .menu > .menu_item:not(.logo) {
+  		display: block;
+	}
+	#button:checked ~ .menu > .menu_item:nth-child(6){
+  		display: none;
+	}
+	#button:checked ~ .menu > .menu_item:nth-child(7){
+  		display: none;
+	}
     .header-content-tablet{
         display: block;
         visibility: visible;
@@ -397,6 +472,31 @@ footer{
         align-self: center;
         line-height: 60px;
     }
+    body.dark {
+        background: #292C35;
+    }
+    .container-dark{
+        background: #593018;
+    }
+    .header-dark{
+        background-image: url(..//img/headerdark.png);
+        
+    }
+    .a-dark{
+        color: white;
+    }
+    .p-dark{
+        color: white;
+    }
+    .h1-dark{
+        color: white;
+    }
+    .main-dark{
+        background: #593018;
+    }
+    .footer-dark{
+        background: #000;
+    }
     .menu h1{
         margin-bottom: 80px;
         text-align: center;
@@ -405,10 +505,16 @@ footer{
         
         
     }
-    .menu-flex{
-        display: flex;
-        flex-wrap: wrap;
-        
+    .menu-grid{
+        display: grid;
+        align-items: center;
+        grid-auto-columns: 147.8px, 147.8px, 147.8px, 147.8px, 147.8px;
+    }
+    .menu-div01{
+        grid-column: 5/6;
+    }
+    .menu-div02{
+        grid-column: 6/7;
     }
     .menu-flex div{
         margin: 1px;
@@ -430,12 +536,17 @@ footer{
         text-align: center;
     }
     .coffe-card img{
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
     }
     .kontent{
         position: relative;
-        top: 80px;
+        top: 100px;
+    }
+    .kontent h1{
+        display: block;
+        margin: 0 auto;
     }
 }
 @media (max-width: 480px){
