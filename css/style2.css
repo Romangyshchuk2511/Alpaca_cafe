@@ -92,54 +92,7 @@ body.dark {
     top: 20px;
     margin: px;
 }
-#button {
-    
-    display: none;
-    visibility: hidden;
-  }
-  .block {
-    width: 25px;
-    height: 5px;
-    background: #000;
-    position: absolute;
-    left: calc(50% - 12.5px);
-    top: 20px;
-    transition: 0.3s;
-    display: none;
-    visibility: hidden;
-  }
-  .block:after,
-  .block:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: #000;
-    position: absolute;
-    transition: 0.3s;
-  }
-  .block:after {
-    top: 9px;
-  }
-  .block:before {
-    bottom: 9px;
-  }
-  #button:checked ~ .button > .block {
-    background: transparent;
-  }
-  #button:checked ~ .button > .block:after {
-    transform: rotate(45deg);
-    top: 0;
-  }
-  #button:checked ~ .button > .block:before {
-    transform: rotate(-45deg);
-    bottom: 0;
-  }
-  #button:checked ~ .menu  {
-    height: 79px;
-  }
-  #button:checked ~ .menu > .menu_item:not(.logo) {
-    display: none;
-  }
+
 .header-content-desktop{
     position: relative;
     top: 100px;

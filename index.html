@@ -29,21 +29,24 @@
                     </label>
                 </div>
                 
-                <a href="">Меню</a>
+
                 <img src="img/Vector 4.png" class="logo" alt="">
                 <input type="checkbox" id="button">
-                <label for="button" class="button">
-                      <div class="block"></div>
-                </label>
-                <a href="">Контакти</a>
-                
-                <input type="checkbox" id="button">
-		        <label for="button" class="button">
- 			        <div class="block"></div>
-		        </label>
+                <nav class="header__nav nav-bar">
+                    <div class="toggle-menu">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-list-item"><a href="" class="nav-link">Меню</a></li>
+                        <li class="nav-list-item"><a href="" class="nav-link">Контакти</a></li>
+                  <li class="nav-list-item"><a href="" class="nav-link">Кошик</a></li>
+                    </ul>
+                </nav>
             </nav>
             <div class="header-content-desktop">
-                <p>Одна дівчинка в сторіс написала, що давно шукала нас, тому ми вирішили більше не ховатись і голосно заявити: «Альпаку знайдено».
+                <p class="content-desktop">Одна дівчинка в сторіс написала, що давно шукала нас, тому ми вирішили більше не ховатись і голосно заявити: «Альпаку знайдено».
                     <br>
                     Ми кафе, у якому може бути все, що завгодно. Хочеш відривний бар, щоб туц-туц — це Альпака. Ресторан, щоб смачно — ну ок, це Альпака. А можна і лате та фільтр, як у справжній кав‘ярні.
                    <br>
@@ -65,81 +68,92 @@
         </header>
         
         <main>
-            
-            <div class="menu">
-                <h1>Наше меню</h1>
+            <h1>Наше меню</h1>      
+            <div class="filter-div">
+                <div></div>
+                
+                <select name="news-filter" class="filter"> 
+                <option value="milk">З молоком</option> 
+                <option value="adult">Для дорослих</option> 
+                <option value="cocoa">Какао</option> 
+                <option value="citrus">З цитрусами</option> 
+                <option value="all" selected>Вся кава</option> 
+              </select> 
+              </div>
+            <div class="menu" id="menu">
+                
                 <div class="menu-flex menu-grid">
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div" data-category="cocoa">
                         <a href="bigcocoa.html">
                             <img src="img/big cocoa.png" alt="" width="300px">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="milk">
                         <a href="cappucino.html">
                             <img src="img/cappucino.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div" data-category="citrus">
                         <a href="capuoranzh.html">
                             <img src="img/capuoranzh.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="milk">
                         <a href="doublecappucino.html">
                             <img src="img/double cappuchino.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div" data-category="milk">
                         <a href="espressomakiato.html">
                             <img src="img/espresso makiato.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="cold">
                         <a href="espressotonic.html">
                             <img src="img/espresso tonic.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div">
                         <a href="espresso.html">
                             <img src="img/espresso.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div">
                         <a href="filtercoffe.html">
                             <img src="img/filter coffee.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div">
                         <a href="filtercoffexl.html">
                             <img src="img/filter coffee xl.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="milk">
                         <a href="flatwhite.html">
                             <img src="img/flat white.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div">
                         <a href="handbrew.html">
                             <img src="img/hand brew.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="adult">
                         <a href="irishcoffe.html">
                             <img src="img/irish coffee.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div" data-category="milk">
                         <a href="latte.html">
                             <img src="img/latte.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div02">
+                    <div class="menu-div02 menu-div" data-category="milk">
                         <a href="matchalate.html">
                             <img src="img/matcha late.png" alt="">
                         </a>
                     </div>
-                    <div class="menu-div01">
+                    <div class="menu-div01 menu-div" data-category="cocoa">
                         <a href="smallcocoa.html">
                             <img src="img/small cocoa.png" alt="">
                         </a>
@@ -147,10 +161,107 @@
                 </div>
             </div>
         </main>
+        <div class="cookies-agreement"> 
+            <p>Поки ви знаходитесь на нашому сайті та обираєте каву, ми використовуємо ваші кукіс. Дуже сподіваємось, що ви не проти.</p> 
+            <button class="button cookies-button" type="button">Окей, продовжуйте</button> 
+            </div> 
         <button class="up-button">
             <img src="img/up-arrow.png" alt="">
         </button>
-        <footer></footer>
+        <footer id="footer">
+            <div class="footer-div01">
+                <br>
+                <br>
+                
+                <section>
+                    <img src="img/Vector.png" alt="">
+                    <a>+380988484343</a>
+                </section>
+                <br>
+                <br>
+                <br>
+                <section>
+                    <img src="img/Vector (3).png" alt="">
+                    <a>Alpacadocs43b@gmail.com</a>
+                </section>
+                <br>
+                <br>
+                <br>
+                <section>
+                    <img src="img/Vector (1).png" alt="">
+                    <a>alpacacafe.kiev</a>
+                </section>
+                <br>
+                <br>
+                <br>
+                <section>
+                    <img src="img/Vector (4).png" alt="">
+                    <a>alpacacafe.kiev</a>
+                </section>
+            </div>
+            <br>
+            <div class="footer-div02">
+                <br>
+                <br>
+                <br>
+                <section>
+                    <img src="img/Vector (2).png" alt="">
+                    <p> Пн-Чт 8:30-21:30
+                        <br>
+                        Пт 8:30-22:00
+                        <br>
+                        Сб-Нд 10:00-22:30
+                        <br>
+                    </p>
+                </section>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+
+                <section>
+                    <img src="img/Vector (5).png" alt="">
+                    <p> Київ, вул. Жилянська 43 
+                        <br>
+                        (ти впізнаєш нас 
+                        <br>
+                        завдяки нашій
+                        <br>
+                        зеленій стіні)
+                    </p>
+                </section>
+                <form action="post" class="subscription-message">
+                    <h2>Наскільки вам сподобались наші новини?</h2>
+                    <aside>
+                    <label for="rate-radio1">Все жахливо</label>
+                    <input type="radio" id="rate-radio1" class="review" data-evaluation="bad" name="radio">
+                    </aside>    
+                    <aside>
+                    <label for="rate-radio2">Так собі</label>
+                    <input type="radio" id="rate-radio2" class="review" data-evaluation="good" name="radio">
+                    </aside>
+                    <aside>
+                    <label for="rate-radio3">Хочу більше новин</label>
+                    <input type="radio" id="rate-radio3" class="review" data-evaluation="good" name="radio">
+                    </aside>
+                    <aside>
+                    <label for="rate-radio4">Піде</label>
+                    <input type="radio" id="rate-radio4" class="review" data-evaluation="good" name="radio">
+                    </aside>
+                    <aside>
+                    <label for="rate-radio5">Краще не буває!</label>
+                    <input type="radio" id="rate-radio5" class="review" data-evaluation="good" name="radio">
+                    </aside>
+                    <aside>
+                    <label for="rate-radio6">Мій улюблений сайт!</label>
+                    <input type="radio" id="rate-radio6" class="review" data-evaluation="good" name="radio">
+                    </aside>
+                    <button class="submit-button button-28">Відправити відгук</button>
+                  </form> 
+            </div>
+        </footer>
         
     </div>
     <script src="js/script.js"></script>
